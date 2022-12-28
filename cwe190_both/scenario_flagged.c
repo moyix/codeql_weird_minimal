@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern int getMonthlySales_1(int month);
+int getMonthlySales_1(int month) {
+    return month * 1073741824;
+}
 
 int main(int argc, char *argv[]) {
     // sum the number of sales for the first quarter

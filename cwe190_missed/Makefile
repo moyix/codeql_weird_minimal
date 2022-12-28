@@ -3,9 +3,9 @@ OPT := -O1
 endif
 
 SRCS := $(wildcard *.c)
-OBJS := $(SRCS:.c=.o)
+OBJS := $(SRCS:.c=)
 
 all: $(OBJS)
 
-%.o: %.c
-	$(CC) -g $(OPT) -c $< -o $@
+%: %.c
+	$(CC) -g $(OPT) $< -o $@
